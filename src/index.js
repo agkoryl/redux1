@@ -5,7 +5,7 @@ import { createStore, combineReducers } from 'redux';
 import './index.css';
 import App from './App';
 import counterReducer, {inc, dec} from './store/counter';
-import toDosReducer, {newToDo, toggleToDo}  from './store/todos';
+import toDosReducer, {newToDo, toggleToDo, removeToDo}  from './store/todos';
 
 //Store
 
@@ -25,7 +25,7 @@ window.inc = () => store.dispatch(inc())
 window.dec =()=> store.dispatch(dec())
 window.addtodo = (text) => store.dispatch(newToDo(text))
 window.toggle = (id) => store.dispatch(toggleToDo(id))
-
+window.remove = (id) => store.dispatch(removeToDo(id))
 
 console.log(store.getState());
 

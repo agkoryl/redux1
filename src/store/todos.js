@@ -1,6 +1,7 @@
 
 export const ADD_TODO = 'ADD_TODO';
 export const TOGGLE_TODO = 'TOGGLE_TODO';
+export const REMOVE_TODO = 'REMOVE_TODO';
 
 
 export const newToDo = text => ({
@@ -13,6 +14,10 @@ export const toggleToDo = todoID => ({
     id: todoID
 })
 
+export const removeToDo = todoID => ({
+    type: REMOVE_TODO,
+    id: todoID
+})
 
 let id = 0;
 
@@ -38,6 +43,12 @@ const toDosReducer = (state = [], action) => {
                     { ...todo, isCompleted: !todo.isCompleted }
                     : todo
             })
+
+        case REMOVE_TODO: 
+
+        return state.filter(todo => {
+            return todo.id !== action.id
+        })
 
         default:
             return state
