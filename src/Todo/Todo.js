@@ -10,6 +10,7 @@ const TodoList = props => {
         if(event.which === 13) {
             const value = event.target.value;
             props._addtask(value);
+            event.target.value = "";
           }
     }
 
