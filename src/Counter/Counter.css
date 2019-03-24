@@ -1,0 +1,30 @@
+.counter-button {
+    width: 100px;
+    height: 50px;
+    margin: 10px;
+    font-size: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+}
+
+.counter-display {
+    font-size: 40px;
+    margin: 30px;
+}
+
+.button-add {
+    background-color: green;        
+}
+
+.button-substract {
+    background-color: firebrick;
+}
+
+.button-reset {
+    width: 150px;
+    padding: 5px;
+    font-size: 30px;
+    background-color: gold;
+
+}
